@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package simplemediaconvertor;
-
 /**
  *
  * @author User Nisais N
@@ -19,11 +18,17 @@ import it.sauronsoftware.jave.EncoderException;
 import it.sauronsoftware.jave.EncodingAttributes;
 import it.sauronsoftware.jave.FFMPEGLocator;
 import it.sauronsoftware.jave.InputFormatException;
-public class ViddeoToAudio {
-    
-        static String path="C:/Users/KL/Desktop/output.wav";
-	static String pathpm3="C:/Users/KL/Desktop/output.mp3";
-	public static void convertToAudio(File video) throws 
+import static simplemediaconvertor.ViddeoToAudio.path;
+
+
+class  mp4Tomp3 extends ConversionType{  
+        //@override  
+         public void getType(){  
+             type="A";              
+        }  
+         static String path;
+	static String pathpm3;
+         public static void convertToAudio(File video) throws 
     IllegalArgumentException, InputFormatException, EncoderException, IOException
 	{
 		File target = new File(path);
@@ -53,5 +58,4 @@ public class ViddeoToAudio {
 		Encoder encoder = new Encoder();
 		encoder.encode(video, target, attrs);
 	}
-	
-}
+   }
