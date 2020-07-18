@@ -9,10 +9,6 @@ package simplemediaconvertor;
  *
  * @author User
  */
-    import java.io.*;      
-abstract class ConversionType{  
-         protected String type;  
-         abstract void getType();  
-   
-}//end of Plan class. 
-
+public class Convertor {
+    
+}

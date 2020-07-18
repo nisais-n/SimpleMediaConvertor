@@ -27,11 +27,11 @@ class  mp4Tomp3 extends ConversionType{
              type="A";              
         }  
          static String path;
-	static String pathpm3;
+	static String pathSave;
          public static void convertToAudio(File video) throws 
     IllegalArgumentException, InputFormatException, EncoderException, IOException
 	{
-		File target = new File(path);
+		File target = new File(path); 
 		AudioAttributes audio = new AudioAttributes();
 		audio.setCodec("libmp3lame");
 		audio.setBitRate(new Integer(128000));
@@ -46,7 +46,7 @@ class  mp4Tomp3 extends ConversionType{
 	}
 	public static void convertToMP3(File video) throws IllegalArgumentException, InputFormatException, EncoderException
 	{
-		File target = new File(pathpm3);
+		File target = new File(pathSave);
 		AudioAttributes audio = new AudioAttributes();
 		audio.setCodec("libmp3lame");
 		audio.setBitRate(new Integer(128000));
