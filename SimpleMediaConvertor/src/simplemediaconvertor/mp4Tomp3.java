@@ -18,7 +18,6 @@ import it.sauronsoftware.jave.EncoderException;
 import it.sauronsoftware.jave.EncodingAttributes;
 import it.sauronsoftware.jave.FFMPEGLocator;
 import it.sauronsoftware.jave.InputFormatException;
-import static simplemediaconvertor.ViddeoToAudio.path;
 
 
 class  mp4Tomp3 extends ConversionType{  
@@ -27,7 +26,7 @@ class  mp4Tomp3 extends ConversionType{
              type="A";              
         }  
          static String path;
-	static String pathSave;
+         static String pathSave;
          public static void convertToAudio(File video) throws 
     IllegalArgumentException, InputFormatException, EncoderException, IOException
 	{
