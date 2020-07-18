@@ -7,12 +7,14 @@ package simplemediaconvertor;
 
 /**
  *
- * @author User
- */
-    import java.io.*;      
+ * @author User Nisais N
+ */     
 abstract class ConversionType{  
-         protected String type;  
-         abstract void getType();  
+         protected String type; 
+         protected String FileSourcePath;
+         protected String FileSavePath;
+         abstract void getType(); 
+         
    
 }//end of Plan class. 
 

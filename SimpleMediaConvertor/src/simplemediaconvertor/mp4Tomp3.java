@@ -23,11 +23,13 @@ import it.sauronsoftware.jave.InputFormatException;
 class  mp4Tomp3 extends ConversionType{  
         //@override  
          public void getType(){  
-             type="A";              
+             type="A"; 
+             
         }  
-         static String path;
-         static String pathSave;
-         public static void convertToAudio(File video) throws 
+            public String path = FileSourcePath;
+            public String pathSave = FileSavePath;
+        
+         public  void convertToAudio(File video) throws 
     IllegalArgumentException, InputFormatException, EncoderException, IOException
 	{
 		File target = new File(path); 
@@ -43,7 +45,7 @@ class  mp4Tomp3 extends ConversionType{
 		encoder.encode(video, target, attrs);
 		
 	}
-	public static void convertToMP3(File video) throws IllegalArgumentException, InputFormatException, EncoderException
+	public  void convertToMP3(File video) throws IllegalArgumentException, InputFormatException, EncoderException
 	{
 		File target = new File(pathSave);
 		AudioAttributes audio = new AudioAttributes();
