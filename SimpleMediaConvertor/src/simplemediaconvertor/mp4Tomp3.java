@@ -18,17 +18,27 @@ import it.sauronsoftware.jave.EncoderException;
 import it.sauronsoftware.jave.EncodingAttributes;
 import it.sauronsoftware.jave.FFMPEGLocator;
 import it.sauronsoftware.jave.InputFormatException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
-class  mp4Tomp3 extends ConversionType{  
+abstract class  mp4Tomp3 extends ConversionType{  
         @Override  
          public void getType(){  
              type="A"; 
+            try {
+                convertToMP3();
+            } catch (IllegalArgumentException ex) {
+                Logger.getLogger(mp4Tomp3.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (EncoderException ex) {
+                Logger.getLogger(mp4Tomp3.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }  
             public String path = FileSourcePath;
             public String pathSave = FileSavePath;
+            File video;
         
-	private  void convertToMP3(File video) throws IllegalArgumentException, InputFormatException, EncoderException
+	public  void convertToMP3() throws IllegalArgumentException, InputFormatException, EncoderException
 	{
                 video = new File(path);
 		File target = new File(pathSave);
