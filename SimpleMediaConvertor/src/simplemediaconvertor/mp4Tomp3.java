@@ -34,9 +34,11 @@ class  mp4Tomp3 extends ConversionType{
         }  
             Convertor conv = new Convertor();
             File video;
+            
         
 	public  void convertToMP3() throws IllegalArgumentException, InputFormatException, EncoderException
 	{
+               System.out.print(conv.Mpath);  
                 video = new File(conv.Mpath);
 		File target = new File(conv.MpathSave);
 		AudioAttributes audio = new AudioAttributes();

@@ -28,16 +28,15 @@ public class Convertor {
       
       System.out.print("Enter the Conversion Type: \n\n \t \t A - MP4 to MP3 \n\n \t\t B - MP4 to MKV \n\n\t\t C - MP4 to FLV \n\n ");  
       String planType=br.readLine();  
-      System.out.print("Enter the file path: ");
-      String Mpath=br.readLine(); 
+     // System.out.print("Enter the file path: ");
+     // String Mpath=br.readLine(); 
       System.out.print("Enter the file saving path: ");
-      String MpathSave=br.readLine(); 
+      //String MpathSave=br.readLine(); 
       
   
       ConversionType Con = planFactory.getType(planType); 
      // Con.FileSavePath = Mpath;
     //  Con.FileSourcePath = MpathSave;
-      //call getRate() method and calculateBill()method of DomesticPaln.  
   
        //System.out.print("Converting of  "+Mpath+" Done  to "+planType+" Success: ");  
           Con.getType();    

@@ -23,7 +23,7 @@ class GetPlanFactory{
                 //return new mp4Toflv();  
             }   
           else if(planType.equalsIgnoreCase("C")) {  
-               // return new mp4Tomkv();  
+                return new mp4Toflv();  
           }  
       return null;  
    }  
