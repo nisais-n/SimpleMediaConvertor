@@ -21,32 +21,16 @@ import it.sauronsoftware.jave.InputFormatException;
 
 
 class  mp4Tomp3 extends ConversionType{  
-        //@override  
+        @Override  
          public void getType(){  
              type="A"; 
-             
         }  
             public String path = FileSourcePath;
             public String pathSave = FileSavePath;
         
-         public  void convertToAudio(File video) throws 
-    IllegalArgumentException, InputFormatException, EncoderException, IOException
+	private  void convertToMP3(File video) throws IllegalArgumentException, InputFormatException, EncoderException
 	{
-		File target = new File(path); 
-		AudioAttributes audio = new AudioAttributes();
-		audio.setCodec("libmp3lame");
-		audio.setBitRate(new Integer(128000));
-		audio.setChannels(new Integer(2));
-		audio.setSamplingRate(new Integer(44100));
-		EncodingAttributes attrs = new EncodingAttributes();
-		attrs.setFormat("wav");
-		attrs.setAudioAttributes(audio);
-		Encoder encoder = new Encoder();
-		encoder.encode(video, target, attrs);
-		
-	}
-	public  void convertToMP3(File video) throws IllegalArgumentException, InputFormatException, EncoderException
-	{
+                video = new File(path);
 		File target = new File(pathSave);
 		AudioAttributes audio = new AudioAttributes();
 		audio.setCodec("libmp3lame");
