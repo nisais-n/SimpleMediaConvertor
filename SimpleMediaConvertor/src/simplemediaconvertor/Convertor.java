@@ -19,7 +19,8 @@ public class Convertor {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-         
+         public String MpathSave;
+         public String Mpath;
 
     public static void main(String args[])throws IOException{  
       GetPlanFactory planFactory = new GetPlanFactory();  
@@ -34,8 +35,8 @@ public class Convertor {
       
   
       ConversionType Con = planFactory.getType(planType); 
-      Con.FileSavePath = Mpath;
-      Con.FileSourcePath = MpathSave;
+     // Con.FileSavePath = Mpath;
+    //  Con.FileSourcePath = MpathSave;
       //call getRate() method and calculateBill()method of DomesticPaln.  
   
        //System.out.print("Converting of  "+Mpath+" Done  to "+planType+" Success: ");  

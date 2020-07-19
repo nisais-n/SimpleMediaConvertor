@@ -11,8 +11,8 @@ package simplemediaconvertor;
  */     
 abstract class ConversionType{  
          protected String type; 
-         protected String FileSourcePath;
-         protected String FileSavePath;
+        // protected String FileSourcePath;
+        // protected String FileSavePath;
          abstract void getType(); 
         // abstract void  convertToMP3();
          

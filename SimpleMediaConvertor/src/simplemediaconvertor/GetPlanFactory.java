@@ -17,7 +17,7 @@ class GetPlanFactory{
              return null;  
             }  
           if(planType.equalsIgnoreCase("A" )) {  
-                 return new mp4Tomp3() {};  
+                 return new mp4Tomp3();  
                }   
            else if(planType.equalsIgnoreCase("B")){  
                 //return new mp4Toflv();  
