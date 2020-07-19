@@ -5,6 +5,11 @@
  */
 package simplemediaconvertor;
 
+import it.sauronsoftware.jave.AudioAttributes;
+import it.sauronsoftware.jave.Encoder;
+import it.sauronsoftware.jave.EncoderException;
+import it.sauronsoftware.jave.EncodingAttributes;
+import it.sauronsoftware.jave.InputFormatException;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,7 +21,7 @@ import java.util.logging.Logger;
 public class mp4Toflv extends ConversionType{  
         @Override  
          public void getType(){  
-             type="A"; 
+             type="C"; 
             try {
                 convertToflv();
             } catch (IllegalArgumentException | EncoderException ex) {
@@ -28,8 +33,8 @@ public class mp4Toflv extends ConversionType{
         
 	public  void convertToflv() throws IllegalArgumentException, InputFormatException, EncoderException
 	{
-                video = new File("source.avi");
-		File target = new File("target.flv");
+                video = new File(conv.Mpath);
+		File target = new File(conv.MpathSave);
 		AudioAttributes audio = new AudioAttributes();
 		audio.setCodec("libmp3lame");
 		audio.setBitRate(new Integer(128000));
